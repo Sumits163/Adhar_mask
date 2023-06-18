@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+    <title>User Registration</title>
+</head>
+<body>
+    <div class="container">
+        <table id="styled_table">
+            <tr>
+                <th>Name</th>
+                <th>Aadhar Number</th>
+                <th>Action</th>
+            </tr>
+            {% for i in users %}
+            <tr>
+                <td>{{ i.name }}</td>
+                <td>{{ i.aadhar_number }}</td>
+                <td><a href="/show/aadhar/{{i.aadhar_number}}/">View Adhaar</a><a href="/delete/user/{{i.aadhar_number}}/" style="margin-left: 2px;">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

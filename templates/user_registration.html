@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+    
+</head>
+
+<body>
+    <div class="container">
+    <form action="/register/" method="post" enctype="multipart/form-data">
+        <input type="text" placeholder="Name..." name="name"><br>
+        <input type="number" min ="111111111111" placeholder="Aadhar Number..." name="ad_number"><br>
+        <input type="file" title="Choose a video please" name="front" id="img" />
+        <input type="file" title="Choose a video please" placeholder="Aadhar Back.." name="back"><br>
+        <input type="submit">
+    </form>
+    </div>
+</body>
+</html>
