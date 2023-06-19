@@ -8,7 +8,16 @@
     <title>User Registration</title>
 </head>
 <body>
-    <div class="container">
+    <div class="parent-div" style="height: 100%;width: 100%;">
+    </div>
+  
+    <div class="header-div"
+      style="display: block;padding:20px 0px ;background-color: rgb(105, 186, 216); height: 40%;width:100%;position: relative;text-decoration: none; box-shadow: 2px 3px 10px 3px;">
+      <h2>Adhar Mask Portal</h2>
+    </div>
+    <h1 style="margin: 3% 0% 0% 39%;padding: 10px;">ALL REGISTRATIONS</h1>
+
+    <div class="container" style="box-shadow: 5px 3px 10px 3px;padding: 5%;">
         <table id="styled_table">
             <tr>
                 <th>Name</th>
@@ -19,7 +28,7 @@
             <tr>
                 <td>{{ i.name }}</td>
                 <td>{{ i.aadhar_number }}</td>
-                <td><a href="/show/aadhar/{{i.aadhar_number}}/">View Adhaar</a><a href="/delete/user/{{i.aadhar_number}}/" style="margin-left: 2px;">Delete</a></td>
+                <td><a href="/show/aadhar/{{i.aadhar_number}}/" style="margin-right: 1px;background-color: rgb(204, 232, 93)">View Adhaar</a><a href="/delete/user/{{i.aadhar_number}}/" style="margin-left: 2px;background-color: red">Delete</a></td>
             </tr>
             {% endfor %}
         </table>
